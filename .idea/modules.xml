@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/LearnJava.iml" filepath="$PROJECT_DIR$/.idea/LearnJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/classesAndObjects/classesAndObjects.iml" filepath="$PROJECT_DIR$/classesAndObjects/classesAndObjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/composition/composition.iml" filepath="$PROJECT_DIR$/composition/composition.iml" />
       <module fileurl="file://$PROJECT_DIR$/constructors/constructors.iml" filepath="$PROJECT_DIR$/constructors/constructors.iml" />
       <module fileurl="file://$PROJECT_DIR$/inheritance/inheritance.iml" filepath="$PROJECT_DIR$/inheritance/inheritance.iml" />
     </modules>
