@@ -9,8 +9,8 @@ public class ArrayListImpl {
 
     public void displayList(){
         System.out.println("you have "+groceryList.size()+ " items in your list now!");
-        for (int count=0;count<groceryList.size();count++){
-            System.out.println(groceryList.get(count));
+        for (String s : groceryList) {
+            System.out.println(s);
         }
     }
 
@@ -50,8 +50,8 @@ public class ArrayListImpl {
         //second way of doing it with direct initialization
         ArrayList<String> newListCopy = new ArrayList<String>(groceryList);
 
-        for (int count=0;count<newList.size();count++){
-            System.out.println(newList.get(count));
+        for (String s : newList) {
+            System.out.println(s);
         }
 
         //using a array method
