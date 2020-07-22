@@ -59,6 +59,7 @@ public class ArrayListImpl {
         myArray=groceryList.toArray(myArray);
 
 
+
     }
 
 
@@ -86,6 +87,16 @@ public class ArrayListImpl {
 
         listExample.displayList();
         listExample.processArrayList();
+
+        //we cant have types for primitive types so we use this classes not int
+        //This is called autoboxing (casting primitive to higher)
+        ArrayList<Integer> prices = new ArrayList<Integer>();
+        prices.add(Integer.valueOf(34));
+
+        Double value= 9999.0;
+
+        //unboxing
+        System.out.println(34+"------->"+prices.get(0).intValue());
 
 
 
