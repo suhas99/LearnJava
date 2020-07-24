@@ -30,6 +30,8 @@ public class LinkedListmpl {
         addInOrder(placesToVisit,"paris");
         printList(placesToVisit);
 
+        visit(placesToVisit);
+
 
     }
     public static void printList(LinkedList<String> linkedList){
@@ -67,21 +69,76 @@ public class LinkedListmpl {
         return true;
     }
 
-//    private static void visit(LinkedList<String> citiesNode){
-//    ListIterator<String> node =citiesNode.listIterator();
-//    Scanner scanner =new Scanner(System.in);
-//    boolean quit=false;
-//
-//    if(citiesNode.getFirst()==""){
-//        System.out.println("no data is present");
-//        return;
-//    }else{
-//        System.out.println("now visiting node"+node.next());
-//    }
-//
-//    while (!quit){
-//      int action =
-//    }
-//
-//    }
+    //method to check how list is being traversed
+    private static void visit(LinkedList<String> citiesNode){
+    ListIterator<String> node =citiesNode.listIterator();
+    Scanner scanner =new Scanner(System.in);
+    boolean quit=false;
+    boolean movingForward=true;
+
+    //can also use cities.isempty()
+    if(citiesNode.getFirst()==""){
+        System.out.println("no data is present");
+        return;
+    }else{
+        System.out.println("now visiting node "+node.next());
+        printMenu();
+    }
+
+    while (!quit){
+      int action =scanner.nextInt();
+      scanner.nextLine();
+
+      switch (action){
+          case 0:
+              System.out.println("trip finished");
+              quit=true;
+              break;
+          case 1:
+              //the first if block is specified to avoid loops in linkedlist by listIterator. if we dont use we will be visting same node while changing back and forward. comment and see what we get
+              if(!movingForward){
+                  if(node.hasNext()){
+                      node.next();
+                  }
+                  movingForward =true;
+              }
+              if (node.hasNext()){
+                  System.out.println("now visiting "+node.next());
+              }
+              else{
+                  System.out.println("Reached end of the list");
+                  movingForward=false;
+              }
+              break;
+          case 2:
+              if(movingForward){
+                  if(node.hasPrevious()){
+                      node.previous();
+                  }
+                  movingForward=false;
+              }
+              if(node.hasPrevious()){
+                  System.out.println("now traversing back to "+node.previous());
+              }
+              else{
+                  System.out.println("This is top element of list");
+                  movingForward=true;
+              }
+              break;
+          case 3:
+              printMenu();
+              break;
+      }
+    }
+
+    }
+
+    // simple method for scanner
+    private static void printMenu(){
+        System.out.println("Available actiona :\n press" );
+        System.out.println("0 - quit\n"+
+                "1 - next city \n"+
+                "2 -previous city\n"+
+                "3 - print menu options");
+    }
 }
