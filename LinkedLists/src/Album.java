@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Album {
-    String name;
-    String artist;
+    private String name;
+    private String artist;
     private ArrayList<Song> songs;
 
     public Album(String name, String artist) {
