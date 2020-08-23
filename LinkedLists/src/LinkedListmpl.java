@@ -35,10 +35,9 @@ public class LinkedListmpl {
 
     }
     public static void printList(LinkedList<String> linkedList){
-        Iterator<String> node=linkedList.iterator();
 
-        while (node.hasNext()){
-            System.out.println("now visiting "+node.next());
+        for (String s : linkedList) {
+            System.out.println("now visiting " + s);
         }
 
         System.out.println("--------------------");
@@ -61,7 +60,7 @@ public class LinkedListmpl {
                 node.add(newCity);
                 return true;
             }
-            else if (comparison<0){
+            else {
                 //
             }
         }
