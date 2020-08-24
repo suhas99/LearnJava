@@ -8,11 +8,11 @@
       <module fileurl="file://$PROJECT_DIR$/Interfaces/Interfaces.iml" filepath="$PROJECT_DIR$/Interfaces/Interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LearnJava.iml" filepath="$PROJECT_DIR$/.idea/LearnJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedLists/LinkedLists.iml" filepath="$PROJECT_DIR$/LinkedLists/LinkedLists.iml" />
-      <module fileurl="file://$PROJECT_DIR$/classesAndObjects/classesAndObjects.iml" filepath="$PROJECT_DIR$/classesAndObjects/classesAndObjects.iml" />
-      <module fileurl="file://$PROJECT_DIR$/composition/composition.iml" filepath="$PROJECT_DIR$/composition/composition.iml" />
-      <module fileurl="file://$PROJECT_DIR$/constructors/constructors.iml" filepath="$PROJECT_DIR$/constructors/constructors.iml" />
-      <module fileurl="file://$PROJECT_DIR$/inheritance/inheritance.iml" filepath="$PROJECT_DIR$/inheritance/inheritance.iml" />
-      <module fileurl="file://$PROJECT_DIR$/polymorphism/polymorphism.iml" filepath="$PROJECT_DIR$/polymorphism/polymorphism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClassesAndObjects/classesAndObjects.iml" filepath="$PROJECT_DIR$/ClassesAndObjects/classesAndObjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Composition/composition.iml" filepath="$PROJECT_DIR$/Composition/composition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Constructors/constructors.iml" filepath="$PROJECT_DIR$/Constructors/constructors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inheritance/inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Polymorphism/polymorphism.iml" filepath="$PROJECT_DIR$/Polymorphism/polymorphism.iml" />
     </modules>
   </component>
 </project>
