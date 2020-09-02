@@ -5,7 +5,7 @@ public class Theatere {
     private final String theatereName;
     private List<Seat> seats = new ArrayList<>();
 
-    //constructor logic to
+    //constructor logic to assign seats in row alphabetwise
     public Theatere(String theatereName, int numRows, int seatsPerRow) {
         this.theatereName = theatereName;
         int lastRow = 'A' + (numRows - 1);
