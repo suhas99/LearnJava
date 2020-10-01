@@ -1,8 +1,12 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Theatere {
     private final String theatereName;
+    // collection interface has a hierarchy of sets(sorted set),queues,deque,and lists,maps(sorted map),treeset
+ // we can use arraylist,linked list or hash set or linkedhashset
+//    private List<Seat> seats = new LinkedList<>();
+//    private Collection<Seat> seats = new HashSet<>();
+//    private Collection<Seat> seats = new ArrayList<>();
     private List<Seat> seats = new ArrayList<>();
 
     //constructor logic to assign seats in row alphabetwise
@@ -21,21 +25,37 @@ public class Theatere {
         return theatereName;
     }
 
-    public boolean reserveSeat(String seatNumber) {
-        Seat requestedSeat = null;
+    //common method to check the reserve seat.
+//    public boolean reserveSeat(String seatNumber) {
+//        Seat requestedSeat = null;
 
-        //checking for the requested seat number in array list
-        for (Seat seat : seats) {
-            if (seat.getSeatNumber().equals(seatNumber)) {
-                requestedSeat = seat;
-                break;
-            }
+    //checking for the requested seat number in array list in using binary search. when using binary search use list and comment other method
+
+    public boolean reserveSeat(String seatNumber) {
+        Seat requestedSeat = new Seat(seatNumber);
+        int foundSeat= Collections.binarySearch(seats,requestedSeat,null);
+
+        if(foundSeat>=0){
+            return seats.get(foundSeat).reserve();
         }
-        if (requestedSeat == null) {
-            System.out.println("There is no seat " + seatNumber);
+        else{
+            System.out.println("There is no seat "+seatNumber);
             return false;
         }
-        return requestedSeat.reserve();
+
+
+        //checking for the requested seat number in array list in normal logic
+//        for(Seat seat : seats) {
+//            if (seat.getSeatNumber().equals(seatNumber)) {
+//                requestedSeat = seat;
+//                break;
+//            }
+//        }
+//        if (requestedSeat == null) {
+//            System.out.println("There is no seat " + seatNumber);
+//            return false;
+//        }
+//        return requestedSeat.reserve();
     }
 
     public void getSeats() {
@@ -45,12 +65,17 @@ public class Theatere {
     }
 
     //inner class seat
-    private class Seat {
+    private class Seat implements Comparable<Seat>{
         private final String seatNumber;
         private boolean reserved = false;
 
         public Seat(String seatNumber) {
             this.seatNumber = seatNumber;
+        }
+
+        @Override
+        public int compareTo(Seat seat) {
+            return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
         }
 
         public boolean reserve() {
